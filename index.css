@@ -1,0 +1,479 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior:smooth;
+}
+/* ------------------------container starts----------------------------------- */
+.container{
+    min-height: 620px; 
+    width:100%; 
+    color:white; 
+}
+/* ------------------------nav starts----------------------------------------- */
+nav{ 
+    background: black;
+    width: 100%; 
+    display: flex;  
+    justify-content:space-evenly; 
+    align-items: center; 
+    position: fixed; 
+    top:0; 
+    z-index: 999;
+}
+/* ------------------------nav img------------------------------------------- */
+nav img{
+    width: 100px; height:65px; 
+}
+/* ------------------------nav about----------------------------------------- */
+.navabout{ 
+    width:50%; display: flex; justify-content: space-between;
+}
+ nav div { 
+    font-size:15px; font-weight:bold; padding:5px; transition: 1.3s 0s;
+}
+.navabout a{
+    padding:5px;  transition: 0.2s; text-decoration: none; color:white;
+}
+.fa-bars{
+    color:white;
+}
+/* -------------------------nav anchor hover style-------------------------- */
+a:hover{  border-radius:4px; transform: scale(1.07);
+    background-color:aqua; color:#0c0c36; cursor: pointer;
+}
+.navsearch{ display:flex; padding:0;
+    width: 200px; height:30px; background-color: white;
+}
+.searchi{
+    font-size: 15px; color:black; padding: 7px; 
+}
+.navsearch input{
+    border:none; outline:none; font-size: 14px; 
+}
+
+label,#checkbox{
+    display: none; 
+}
+/* ----------------------nav bar ends---------------------------------------- */
+
+/* ----------------------section 1 starts------------------------------------ */
+.section1{ width:100%; color:black;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top:150px; text-align: center;
+}
+.sec1a{
+    font-weight: 500;
+}
+.sec1b{
+    font-size: 45px; padding:10px 25% 0 ; line-height: 47px;
+} 
+.btn1{
+    width:120px; height:40px; color: white; background:black; border:2px solid black; border-radius:5px; margin-top:20px; font-weight: 500; font-size:14px; transition:  0.1s;
+}
+/* ----------------------section btn hover--------------------------------- */
+.btn1:hover{
+    cursor:pointer; background-color: rgb(0, 0, 0,.8); font-size: 15px; transform:scale(1.07);
+}
+
+/* -----------------------hero div starts---------------------------------- */
+.herodiv{
+    width:100%; text-align:center; position: relative; padding-top: 13%; background-color: black; margin-top: 100px;
+}
+.heroimg1{
+    width:80%;  
+}
+.heroimg2{ display: block;
+    width:55%; padding:0; position: absolute; bottom:4px; left:25%;
+}
+/* ------------------------hero div ends---------------------------------- */
+
+
+/* ------------------------section 2 starts------------------------------- */
+.section2{ background:black; width:70%; padding:100px 3%; margin:auto; margin-top: 120px;
+}
+.section2:hover{
+    background:rgba(0, 0, 0,0.95);
+}
+.section2 h1{
+    padding-bottom:10px;
+}
+.aboutus{
+    line-height: 30px;  
+}
+/* ------------------------section 2 ends-------------------------------- */
+
+
+/* ------------------------imgscroll div start--------------------------- */
+.imgscroll{
+    padding:90px 0; width:100%; display:flex; overflow-x:hidden; background-color: black; margin-top: 100px;
+}
+.imgscroll div{
+    display: flex; 
+    animation: animate 40s linear infinite;
+     animation-delay: -40s;
+}
+.imgscroll div:nth-child(2){
+    animation: animate2 40s linear infinite; animation-delay: -20s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+/* -----------------------img scrolldiv img-------------------------------- */
+.imgscroll div img{
+    max-width:300px; margin:0 25px; border:10px solid transparent; transition:0.25s; opacity: 0.85;
+}
+.imgscroll div img:hover{
+    border:10px solid #fff; box-shadow: 0 20px 40px rgba(0, 0, 0,0.1); opacity: 1; transform: scale(1.06);
+}
+
+/*----------------------- image scroll ends-------------------------------- */
+
+
+/* -----------------------tournament div starts---------------------------- */
+.Tournament{
+    padding:50px 2% 100px; margin-top: 100px; background-color: black;
+}
+.heading{
+    font-size: 40px; text-align: center; padding-bottom: 40px;
+}
+/* -----------------------tournament box div ------------------------------ */
+.Tournament .box-Tournament{
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px;
+}
+/* -----------------------game div starts---------------------------------- */
+.Tournament .box-Tournament .games{
+    box-shadow: 0 5px 10px rgba(0, 0, 0,0.2); border-radius: 5px; text-align: center; line-height: 25px; position:relative; transition: 0.3s;
+}
+.images{
+    display: block; 
+    width:100%; height: 300px; border-radius: 5px;
+}
+/* -----------------------overlay div starts------------------------------- */
+.overlay{
+    position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0,0.75); overflow: hidden; width: 100%; height: 0; transition: all 0.5s ; border-radius: 5px;
+}
+.games:hover .overlay{
+    height:100%; 
+} 
+.overlay h2{
+    padding-top: 50px; color:rgb(46, 255, 4);
+}
+.overlay h3{
+    padding: 10px 10px 6px 10px;
+}
+
+.overlay button{
+    width:120px; height:35px; font-weight: 500; line-height: 0;
+}
+.overlay button:hover{ transition: 0.2s;
+    background-color: black; color:white; cursor: pointer; letter-spacing: 1px;
+}
+.games:hover{
+    transform: scale(1.06);  
+}
+/* ------------------------overlay div ends-------------------------------- */
+
+/* ------------------------tournament div ends----------------------------- */
+
+
+/* ------------------------contact div starts------------------------------ */
+
+/* ------------------------contact-form div starts------------------------- */
+.contact{ background-color: black;
+    display: flex; padding: 50px 5%; margin-top: 100px;
+}
+
+.contact-form{
+    background-color: white; width:60%; padding: 30px;
+}
+.contact-form h3{
+    font-size: 30px; color:black
+}
+
+.contact-form input,textarea,button{
+    width:100%; padding:8px; font-size: 15px; margin-top:20px; border:1px solid black; outline: none; border-radius:4px; background-color: #fff;  
+} 
+.contact-form button{ cursor: pointer;
+    width:120px; height:37px; font-family: 500; background:black; color: #fff;
+}
+/* ----------------------contact form div ends------------------------------- */
+
+
+/* ----------------------contact info div starts----------------------------- */
+.contact-info{
+
+    background-color: black; width:40%; padding: 30px;
+}
+.contact-info img{
+    width: 100px; height:65px; 
+}
+.contact-info h3{
+    font-size: 30px;
+}
+.contact-info p{
+    line-height: 25px;
+}
+.cp1{
+    padding-top: 10px;
+}
+.cp2{
+    padding-top: 20px;
+}
+.top-arrow{background-color: rgba(0, 0, 0,0.6); color:white; border-radius: 50%; padding:6px 9px;
+    font-size: 25px; position:absolute; right:30px; bottom:30px; position: fixed;
+}
+.top-arrow:hover{ color:black;
+    color:aqua; 
+}
+.ic{
+    font-size: 20px; padding:5px; border:1px solid white; border-radius: 50%; background-color: black; margin:15px 10px 0 0;
+}
+/* -----------------------contact info div ends------------------------------ */
+
+/* -----------------------contact div ends----------------------------------- */
+
+
+/* =======================MEDIA QUARY STARTS================================= */
+
+/* ----------------------- MOBILE VIEW STARTS-------------------------------- */
+@media only screen and (max-width:500px){
+    nav{
+        justify-content:space-around;
+    }
+    nav img{
+        width: 100px; height:40px; 
+    }
+/* ------------------------ nav div starts---------------------------------- */
+    .navabout{ width:50%; height:100vh; background:rgba(0, 0, 0,0.85); 
+        position: absolute; flex-direction:column; top:0; left:-100%;
+        justify-content: unset; align-items: unset; padding:20px; transition:all 1s;
+    }
+    .navabout a{
+        margin:10px 0;
+    }
+    .navsearch{
+        display: none;
+    }
+/* -------------------------checkbox--------------------------------------- */
+    #checkbox:checked~.navabout{
+        top:0; left:0;
+    }
+    label{
+        display:block;
+    }
+    .btn1{
+        width:100px; padding:6px; 
+    }
+/* -------------------------section 1 starts------------------------------- */
+    .section1{
+        padding-top:100px; margin-top: 50p;
+    }
+    .sec1a{
+        font-size: 14px;
+    }
+    .sec1b{
+        font-size:24px; padding:7px 5% ; line-height: 25px;
+    }
+    .btn1{
+        width:120px; height:40px; background:black; border:2px solid black ;border-radius:5px; margin-top:20px; font-weight: 500; font-size:14px; transition: 0.6s 0s;
+    }
+    .btn1:hover{
+        cursor:pointer; background-color: aqua; color:#0c0c36; font-size: 14px; 
+    }
+/* -------------------------section w1 ends-------------------------------- */
+
+/* -------------------------hero div starts-------------------------------- */
+    .herodiv{
+        padding-top: 55%;
+    }
+    .heroimg1{
+        display:none;  
+    }
+    .heroimg2{ display: block;
+        width:95%; padding:0; position: absolute; bottom:4px; left:5%;
+    }
+/* -------------------------hero div ends----------------------------------- */
+
+
+/* -------------------------section 2 div starts---------------------------- */
+    .section2{ background:black; margin:0; margin: 50px 7px 0; width:95%; display: flex; flex-direction: column; padding:20px 5%; line-height: 23px; 
+    }
+    .section2 h1{
+        padding-bottom:10px;
+    }
+/* -------------------------section 2 div ends------------------------------ */
+    .about{
+        line-height: 30px;  
+    }
+/* -------------------------img scroll div starts--------------------------- */
+    .imgscroll{
+        padding:20px 0; width:100%; margin-top: 50px;
+    }
+    .imgscroll div img{
+        max-width:200px; margin:0 25px; border:10px solid transparent; transition:0.25s;
+    }
+    .imgscroll div img:hover{
+        border:5px solid #fff; 
+    }
+/* --------------------------img scroll div ends---------------------------- */
+
+
+/* --------------------------tournament starts-------------------------------*/
+    .Tournament{
+        padding:20px 2% 50px; margin-top: 50px; background-color: black;
+    }
+/* --------------------------tournament ends-------------------------------- */
+
+
+/* --------------------------contact div starts----------------------------- */
+    .contact{ margin-top: 20px;
+        display: flex; flex-direction: column; padding: 20px 0 0px;
+    }
+    .heading{
+        font-size: 24px; padding-bottom: 20px;
+    }  
+/* --------------------------contact-form div starts------------------------- */
+    .contact-form{
+        width:100%; padding: 20px 10px;
+    }
+    .contact-form h3{
+        font-size: 25px;
+    }
+    
+    .contact-form input,textarea,button{
+        width:100%; padding:8px; font-size: 15px; margin-top:13px; border:1px solid black; outline: none; border-radius:4px; background-color: #fff;  
+    } 
+    .contact-form button{
+        width:120px; height:37px; font-family: 500; background:black; color: #fff;
+    }
+/* ------------------------contact-form div ends--------------------------- */
+
+
+/* ------------------------contact-info div starts-------------------------- */
+    .contact-info{
+        width:100%; padding: 30px;
+    }
+    .contact-info h3{
+        font-size: 24px;
+    }
+    .contact-info p{
+        line-height: 23px;
+    }
+    .cp1{
+        padding-top: 10px;
+    }
+    .cp2{
+        padding-top: 20px;
+    }
+   
+/* ------------------------contact-info div ends---------------------------- */
+
+/* ------------------------contact div ends--------------------------------- */
+}
+/* ======================== MOBILE VIEW ENDS================================ */
+
+
+/* ======================== TABLET VIEW STARTS============================== */
+@media only screen and (min-width:500px) and (max-width:800px){
+
+/* -------------------------nav div starts---------------------------------- */
+    nav{
+        justify-content:space-around;
+    }
+/* -------------------------nav about starts-------------------------------- */
+    .navabout{ width:50%; height:100vh; background:rgba(0, 0, 0,0.85); 
+        position: absolute; flex-direction:column; top:0; left:-100%;
+        justify-content: unset; align-items: unset; padding:20px; transition:all 1s;
+    }
+    .navabout a{
+        margin:10px 0;
+    }
+    #checkbox:checked~.navabout{
+        top:0; left:0;
+    }
+    label{
+        display:block;
+    }
+    .navsearch{
+        display: none;
+    }
+   
+    label{
+        display:block;
+    }
+/* --------------------------nav div  ends--------------------------------- */
+    .btn1{
+        width:120px; padding:6px; 
+    }
+/* --------------------------section 1 starts------------------------------ */
+    .section1{
+        padding-top:100px;
+    }
+    .sec1a{
+        font-size: 14px;
+    }
+    .sec1b{
+        font-size:24px; padding:7px 5% ; line-height: 25px;
+    }
+/* ---------------------------section 1 ends------------------------------- */
+
+
+/* ---------------------------hero div starts------------------------------ */
+    .herodiv{
+        padding-top: 55%;
+    }
+    .heroimg1{
+        display:none;  
+    }
+    .heroimg2{ display: block;
+        width:95%; padding:0; position: absolute; bottom:4px; left:5%;
+    }
+/* ---------------------------hero div ends------------------------------- */
+
+/* ---------------------------section 2 starts---------------------------- */
+    .section2{ background:black; width:70%; padding:50px 3%; margin:auto; margin-top: 120px; 
+    }
+/* ---------------------------img scroll starts--------------------------- */
+    .imgscroll div img{
+        max-width:250px; margin:0 25px; border:10px solid transparent; transition:0.25s;
+    }
+/* ---------------------------contact div starts--------------------------- */
+    .contact{ width:100%;
+        display: flex; flex-direction: column; padding: 50px 0;
+    }
+/* ---------------------------contact-form div starts---------------------- */
+    .contact-form{
+        width:100%; padding: 20px 0; padding:0 10% 2%;
+    }
+    .contact-form h3{
+        font-size: 25px;
+    }
+    
+    .contact-form input,textarea,button{
+        width:100%; padding:8px; font-size: 15px; margin-top:13px; border:1px solid black; outline: none; border-radius:4px; background-color: #fff;  
+    } 
+    .contact-form button{
+        width:120px; height:37px; font-family: 500; background:black; color: #fff;
+    }
+/* ----------------------------contact-for div ends----------------------- */
+
+/* ----------------------------contact-info div starts-------------------- */
+    .contact-info{
+        width:100%; padding: 30px;
+    }
+/* ----------------------------contact div ends---------------------------- */
+}
+
