@@ -335,6 +335,9 @@ label,#checkbox{
     .Tournament{
         padding:20px 2% 50px; margin-top: 50px; background-color: black;
     }
+    .Tournament .box-Tournament{
+        padding: 10%;
+    }
 /* --------------------------tournament ends-------------------------------- */
 
 
